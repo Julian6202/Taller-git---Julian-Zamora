@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrescoMarket | Del campo a tu mesa</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ajustes rápidos para que las imágenes luzcan bien */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+        .card { padding: 0; overflow: hidden; } /* Para que la imagen cubra los bordes */
+        .card-content { padding: 20px; }
+    </style>
+</head>
+<body>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+
+    <header>
+        <nav>
+            <div class="logo">Fresco<span>Market</span></div>
+            <ul class="nav-links">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Pedido</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Sabor natural en cada bocado</h1>
+            <p>Frutas, verduras y abarrotes seleccionados con amor.</p>
+            <button class="btn-main" onclick="scrollToSection('productos')">Ver Catálogo</button>
+        </div>
+    </section>
+
+    <section id="productos" class="services">
+        <h2>Nuestras Categorías</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="/img/frutas.jpg" alt="Frutas Orgánicas" class="card-img">
+                <div class="card-content">
+                    <h3>Frutas Orgánicas</h3>
+                    <p>Directo de productores locales, sin pesticidas.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/img/verduras.jpg" alt="Vegetales Frescos" class="card-img">
+                <div class="card-content">
+                    <h3>Vegetales Frescos</h3>
+                    <p>Cosechados en el día para mantener su nutrientes.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/img/Panaderia artesanal.jpg" alt="Panadería Artesanal" class="card-img">
+                <div class="card-content">
+                    <h3>Panadería Artesanal</h3>
+                    <p>Hecho con masa madre y harinas integrales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <h2>Haz tu pedido</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Tu Nombre" required>
+            <select id="categoria">
+                <option value="frutas">Frutas</option>
+                <option value="verduras">Verduras</option>
+                <option value="mix">Pedido Mixto</option>
+            </select>
+            <textarea id="message" placeholder="Lista de productos..." required></textarea>
+            <button type="submit">Enviar a WhatsApp</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
